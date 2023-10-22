@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-visit_person",
+      "2": "I-visit_person",
+      "3": "L-visit_person",
+      "4": "U-visit_person",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-visit_person": 1,
+      "I-visit_person": 2,
+      "L-visit_person": 3,
+      "U-visit_person": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

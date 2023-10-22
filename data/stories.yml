@@ -1,0 +1,44 @@
+version: "3.1"
+
+stories:
+
+- story: greet_path_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+##====reg story start ======##
+- story: happy_appointment_path
+  steps:
+  - intent: registration
+  - action: utter_ask_full_name
+  - intent: tell_full_name
+  - action: action_tell_full_name
+  - slot_was_set:
+    - full_name: KIRON MALA
+  - action: utter_ask_icnum
+  - intent: tell_icnum
+  - action: action_tell_icnum
+  - slot_was_set:
+    - icnum: 960401-33-2222
+  - action: utter_ask_scheduledateone
+  - intent: tell_scheduledateone
+  - action: action_tell_scheduledateone
+  - slot_was_set:
+    - scheduledateone: 19/04/1902
+  - action: utter_ask_scheduledatetwo
+  - intent: tell_scheduledatetwo
+  - action: action_tell_scheduledatetwo
+  - slot_was_set:
+    - scheduledatetwo: 19/04/1902 
+  - action: utter_ask_visit_person
+  - intent: tell_visit_person
+  - action: action_tell_visit_person
+  - slot_was_set:
+    - visit_person: someone
+  - action: utter_appointment_confirm
+  - action: action_restart
+  
+
+##====reg story end ======##

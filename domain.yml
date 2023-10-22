@@ -1,0 +1,111 @@
+version: '3.1'
+intents:
+- vessel_schedule
+- affirm
+- registration
+- bot_challenge
+- deny
+- general
+- goodbye
+- greet
+- human_handoff
+- proceed
+- tell_full_name
+- tell_icnum
+- tell_scheduledateone
+- tell_scheduledatetwo
+- tell_visit_person
+
+entities:
+- full_name
+- icnum
+- scheduledateone
+- scheduledatetwo
+- visit_person
+
+slots:
+  full_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: full_name
+  icnum:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: icnum
+  scheduledateone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: scheduledateone
+  scheduledatetwo:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: scheduledatetwo
+  visit_person:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: visit_person
+
+responses:
+  utter_greet:
+  - text: |-
+      Hi 
+
+      Welcome to PTP!
+
+      I am your Virtual Assistant. Please take a moment to select your desired service from the options:
+    buttons:
+    - title: Visitor Registration
+      payload: /registration
+    - title: Vessel Schedule
+      payload: /vessel_schedule
+ 
+  utter_goodbye:
+  - text: |-
+      Warmest Greeting from PTP.
+  utter_iamabot:
+  - text: I'm a virtual assistant here to assist with your PTP support.
+  utter_handoff:
+  - text: I apologize for any inconvenience caused. Allow me to transfer you to a live agent for further assistance.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_ask_full_name:
+  - text: "Could you please provide your full name?"
+  utter_ask_icnum:
+  - text: Please provide your Mykad Number.
+  utter_ask_visit_person:
+  - text: Could you kindly let us know the name of the person you are here to visit?
+  utter_ask_scheduledateone:
+  - text: Could you please provide the visit date from?
+  utter_ask_scheduledatetwo:
+  - text: And what is the visit date to?
+  utter_appointment_confirm:
+  - text: |-
+      Dear {full_name}
+
+      Warmest Greeting from PTP.
+
+      Your visitor registration is successful.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- action_tell_full_name
+- action_tell_icnum
+- action_tell_scheduledateone
+- action_tell_scheduledatetwo
+- action_tell_visit_person
+- utter_ask_full_name
+- utter_ask_icnum
+- utter_ask_visit_person
+- utter_ask_scheduledateone
+- utter_ask_scheduledatetwo
+- utter_appointment_confirm
+- utter_goodbye
+- utter_greet
