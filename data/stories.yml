@@ -2,10 +2,10 @@ version: "3.1"
 
 stories:
 
-- story: greet_path_1
-  steps:
-  - intent: greet
-  - action: utter_greet
+# - story: greet_path_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
 
 
 ##====reg story start ======##

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "tell_full_name",
+    "pattern": "fullname"
+  },
+  {
+    "name": "tell_icnum",
+    "pattern": "icnumber"
+  },
+  {
+    "name": "tell_scheduledateone",
+    "pattern": "scheduleDateonee"
+  },
+  {
+    "name": "tell_scheduledatetwo",
+    "pattern": "scheduleDatetwoo"
+  },
+  {
+    "name": "tell_visit_person",
+    "pattern": "visitpersonn"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-icnum",
+      "2": "I-icnum",
+      "3": "L-icnum",
+      "4": "U-icnum",
+      "5": "B-visit_person",
+      "6": "I-visit_person",
+      "7": "L-visit_person",
+      "8": "U-visit_person",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-icnum": 1,
+      "I-icnum": 2,
+      "L-icnum": 3,
+      "U-icnum": 4,
+      "B-visit_person": 5,
+      "I-visit_person": 6,
+      "L-visit_person": 7,
+      "U-visit_person": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
