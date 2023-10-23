@@ -1,27 +1,27 @@
 version: '3.1'
 intents:
-- vessel_schedule
-- affirm
-- registration
-- bot_challenge
-- deny
-- general
-- goodbye
-- greet
-- human_handoff
-- proceed
-- tell_full_name
-- tell_icnum
-- tell_scheduledateone
-- tell_scheduledatetwo
-- tell_visit_person
+  - vessel_schedule
+  - affirm
+  - registration
+  - bot_challenge
+  - deny
+  - general
+  - goodbye
+  - greet
+  - human_handoff
+  - proceed
+  - tell_full_name
+  - tell_icnum
+  - tell_scheduledateone
+  - tell_scheduledatetwo
+  - tell_visit_person
 
 entities:
-- full_name
-- icnum
-- scheduledateone
-- scheduledatetwo
-- visit_person
+  - full_name
+  - icnum
+  - scheduledateone
+  - scheduledatetwo
+  - visit_person
 
 slots:
   full_name:
@@ -96,16 +96,16 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
-- action_tell_full_name
-- action_tell_icnum
-- action_tell_scheduledateone
-- action_tell_scheduledatetwo
-- action_tell_visit_person
-- utter_ask_full_name
-- utter_ask_icnum
-- utter_ask_visit_person
-- utter_ask_scheduledateone
-- utter_ask_scheduledatetwo
-- utter_appointment_confirm
-- utter_goodbye
-- utter_greet
+  - action_tell_full_name
+  - action_tell_visit_person
+  - action_tell_icnum
+  - action_tell_scheduledateone
+  - action_tell_scheduledatetwo
+  - utter_ask_full_name
+  - utter_ask_visit_person
+  - utter_ask_icnum
+  - utter_ask_scheduledateone
+  - utter_ask_scheduledatetwo
+  - utter_appointment_confirm
+  - utter_goodbye
+  - utter_greet

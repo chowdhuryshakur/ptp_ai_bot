@@ -17,6 +17,11 @@ stories:
   - action: action_tell_full_name
   - slot_was_set:
     - full_name: KIRON MALA
+  - action: utter_ask_visit_person
+  - intent: tell_visit_person
+  - action: action_tell_visit_person
+  - slot_was_set:
+    - visit_person: someone
   - action: utter_ask_icnum
   - intent: tell_icnum
   - action: action_tell_icnum
@@ -32,13 +37,6 @@ stories:
   - action: action_tell_scheduledatetwo
   - slot_was_set:
     - scheduledatetwo: 19/04/1902 
-  - action: utter_ask_visit_person
-  - intent: tell_visit_person
-  - action: action_tell_visit_person
-  - slot_was_set:
-    - visit_person: someone
   - action: utter_appointment_confirm
   - action: action_restart
-  
-
 ##====reg story end ======##

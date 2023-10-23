@@ -23,31 +23,21 @@ nlu:
     - fullname Kuper.
     - fullname Kabir
     - fullname kiron mala
+- intent: tell_visit_person
+  examples: |
+    - visitpersonn Dark J.
+    - visitpersonn Jr. Altaf.
+    - visitpersonn [malaysian](visit_person).
+    - visitpersonn [malaysian](visit_person).
+    - [foreigner](visit_person).
 - intent: tell_icnum
   examples: |
-    - "icnumber 7438874384."
-    - "icnumber is 43-434-43434."
-    - "icnumber 4343443434."
-    - "12-332-2233"
-    - "icnumber 343-323-2222"
-    - "icnumber 664-323-4422"
-    - "icnumber 343-111-2244"
-    - "icnumber 566-111-2244"
-    - "icnumber 343-111-2244"
-    - "icnumber 555-111-2244"
-    - "icnumber 675-111-2244"
-    - "icnumber 343-111-2244"
-    - "icnumber 343-111-2244"
-    - "icnumber 089-111-2244"
-    - "icnumber 787-111-2244"
-    - "icnumber 787-111-2244"
-    - "icnumber 676-111-2244"
-    - "icnumber 4664-111-2244"
-    - "icnumber 5654-111-2244"
-    - "icnumber 4543-111-2244"
-    - "icnumber 343-111-2244"
-    - "icnumber 444-111-2244"
-    - "icnumber 556-111-2244"
+    - icnumber [960401-33-2222](icnum).
+    - icnumber 960401-33-2311.
+    - icnumber 7438874384.
+    - icnumber is 43-434-43434.
+    - icnumber 4343443434.
+    - 12-332-2233
 - intent: tell_scheduledateone
   examples: |
     - "scheduleDateonee 01/02/2023 @ 02:12 pm."
@@ -64,10 +54,6 @@ nlu:
     - "22/04/2023 @ 05:16 pm."
     - "scheduleDatetwoo 12/03/2023 @ 02:03 am"
     - "scheduleDatetwoo 30/06/2023 @ 12:03 pm"
-- intent: tell_visit_person
-  examples: |
-    - visitpersonn [malaysian](visit_person).
-    - [foreigner](visit_person).
 - intent: goodbye
   examples: |
     - cu
