@@ -22,22 +22,21 @@ nlu:
     - fullname Bonni.
     - fullname Kuper.
     - fullname Kabir
-    - fullname kiron mala
+    - fullname Khihan
 - intent: tell_visit_person
   examples: |
     - visitpersonn Dark J.
     - visitpersonn Jr. Altaf.
     - visitpersonn [malaysian](visit_person).
-    - visitpersonn [malaysian](visit_person).
-    - [foreigner](visit_person).
+    - visitpersonn Jihna
 - intent: tell_icnum
   examples: |
     - icnumber [960401-33-2222](icnum).
     - icnumber 960401-33-2311.
     - icnumber 7438874384.
     - icnumber is 43-434-43434.
-    - icnumber 4343443434.
     - 12-332-2233
+    - icnumber 323233-32-3333
 - intent: tell_scheduledateone
   examples: |
     - "scheduleDateonee 01/02/2023 @ 02:12 pm."

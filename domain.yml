@@ -1,28 +1,26 @@
 version: '3.1'
 intents:
-  - vessel_schedule
-  - affirm
-  - registration
-  - bot_challenge
-  - deny
-  - general
-  - goodbye
-  - greet
-  - human_handoff
-  - proceed
-  - tell_full_name
-  - tell_icnum
-  - tell_scheduledateone
-  - tell_scheduledatetwo
-  - tell_visit_person
-
+- affirm
+- bot_challenge
+- deny
+- general
+- goodbye
+- greet
+- human_handoff
+- proceed
+- registration
+- tell_full_name
+- tell_icnum
+- tell_scheduledateone
+- tell_scheduledatetwo
+- tell_visit_person
+- vessel_schedule
 entities:
-  - full_name
-  - icnum
-  - scheduledateone
-  - scheduledatetwo
-  - visit_person
-
+- full_name
+- icnum
+- scheduledateone
+- scheduledatetwo
+- visit_person
 slots:
   full_name:
     type: text
@@ -49,7 +47,6 @@ slots:
     mappings:
     - type: from_entity
       entity: visit_person
-
 responses:
   utter_greet:
   - text: |-
@@ -63,10 +60,8 @@ responses:
       payload: /registration
     - title: Vessel Schedule
       payload: /vessel_schedule
- 
   utter_goodbye:
-  - text: |-
-      Warmest Greeting from PTP.
+  - text: Warmest Greeting from PTP.
   utter_iamabot:
   - text: I'm a virtual assistant here to assist with your PTP support.
   utter_handoff:
@@ -74,7 +69,7 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_ask_full_name:
-  - text: "Could you please provide your full name?"
+  - text: Could you please provide your full name?
   utter_ask_icnum:
   - text: Please provide your Mykad Number.
   utter_ask_visit_person:
@@ -90,22 +85,20 @@ responses:
       Warmest Greeting from PTP.
 
       Your visitor registration is successful.
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 actions:
-  - action_tell_full_name
-  - action_tell_visit_person
-  - action_tell_icnum
-  - action_tell_scheduledateone
-  - action_tell_scheduledatetwo
-  - utter_ask_full_name
-  - utter_ask_visit_person
-  - utter_ask_icnum
-  - utter_ask_scheduledateone
-  - utter_ask_scheduledatetwo
-  - utter_appointment_confirm
-  - utter_goodbye
-  - utter_greet
+- action_tell_visit_person
+- utter_ask_icnum
+- action_tell_full_name
+- action_tell_icnum
+- utter_ask_full_name
+- utter_ask_visit_person
+- action_tell_scheduledateone
+- action_tell_scheduledatetwo
+- utter_ask_scheduledateone
+- utter_ask_scheduledatetwo
+- utter_appointment_confirm
+- utter_goodbye
+- utter_greet
