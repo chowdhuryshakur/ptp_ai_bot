@@ -93,6 +93,7 @@ actions:
 - utter_ask_icnum
 - action_tell_full_name
 - action_tell_icnum
+- action_submit_reg
 - utter_ask_full_name
 - utter_ask_visit_person
 - action_tell_scheduledateone

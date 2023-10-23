@@ -38,6 +38,7 @@ stories:
   - slot_was_set:
     - scheduledatetwo: 19/04/1902 
   - action: utter_appointment_confirm
+  - action: action_submit_reg
   - action: action_restart
 ##====reg story end ======##
 
