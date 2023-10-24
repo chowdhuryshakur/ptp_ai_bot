@@ -15,6 +15,7 @@ intents:
 - tell_scheduledatetwo
 - tell_visit_person
 - vessel_schedule
+- reg_status
 entities:
 - full_name
 - icnum
@@ -60,6 +61,8 @@ responses:
       payload: /registration
     - title: Vessel Schedule
       payload: /vessel_schedule
+    - title: Registration Status
+      payload: /reg_status
   utter_goodbye:
   - text: Warmest Greeting from PTP.
   utter_iamabot:
@@ -98,6 +101,7 @@ actions:
 - utter_ask_visit_person
 - action_tell_scheduledateone
 - action_tell_scheduledatetwo
+- action_reg_status_check
 - utter_ask_scheduledateone
 - utter_ask_scheduledatetwo
 - utter_appointment_confirm

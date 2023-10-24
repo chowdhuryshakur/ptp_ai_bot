@@ -42,3 +42,16 @@ stories:
   - action: action_restart
 ##====reg story end ======##
 
+##====reg status story start ======##
+- story: happy_reg_status_path
+  steps:
+  - intent: reg_status
+  - action: utter_ask_icnum
+  - intent: tell_icnum
+  - action: action_tell_icnum
+  - slot_was_set:
+    - icnum: 323233-32-3333 
+  - action: action_reg_status_check
+  - action: action_restart
+##====reg story end ======##
+
