@@ -1,5 +1,10 @@
 version: "3.1"
 nlu:
+- intent: appointment
+  examples: |
+    - Create Appointment
+    - Appointment
+    - Make an Appointment
 - intent: registration
   examples: |
     - registration
@@ -53,6 +58,20 @@ nlu:
     - "22/04/2023 @ 05:16 pm."
     - "scheduleDatetwoo 12/03/2023 @ 02:03 am"
     - "scheduleDatetwoo 30/06/2023 @ 12:03 pm"
+- intent: tell_name
+  examples: |
+    - namehide Dipu.
+    - namehide Shitu.
+    - namehide Soccur.
+    - namehide Noman
+    - namehide Kiron
+- intent: tell_phone
+  examples: |
+    - number is [+01843727741](phone)
+    - My number is [+01843727741](phone)
+    - My phone number is [4637457382](phone)
+    - [33315327130](phone)
+    - [+83283332838](phone)
 - intent: goodbye
   examples: |
     - cu
@@ -91,6 +110,20 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: tell_icnum_appointment
+  examples: |
+    - "appoic 7438874384."
+    - "appoic is 43-434-43434."
+    - "appoic 4343443434."
+    - "12-332-2233"
+    - "appoic 3433234-323-2222"
+    - "appoic 664-323-4422"
+    - "appoic 3433234-111-2244"
+    - "appoic 566-111-2244"
+    - "appoic 3433234-111-2244"
+    - "appoic 555-111-2244"
+    - "appoic 675-111-2244"
+    - "appoic 3433234-111-2244"
 - intent: human_handoff
   examples: |
     - i am confused
@@ -167,3 +200,12 @@ nlu:
 - regex: tell_visit_person
   examples: |
     - visitpersonn
+- regex: tell_name
+  examples: |
+    - namehide
+- regex: phone
+  examples: |
+    - \d{10,14}
+- regex: tell_icnum_appointment
+  examples: |
+    - appoiic

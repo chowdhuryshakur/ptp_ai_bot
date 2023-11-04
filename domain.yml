@@ -9,6 +9,7 @@ intents:
 - human_handoff
 - proceed
 - registration
+- appointment
 - tell_full_name
 - tell_icnum
 - tell_scheduledateone
@@ -16,13 +17,31 @@ intents:
 - tell_visit_person
 - vessel_schedule
 - reg_status
+- phone
+- name
+- tell_name
+- tell_phone
+- tell_icnum_appointment
 entities:
 - full_name
 - icnum
 - scheduledateone
 - scheduledatetwo
 - visit_person
+- phone
+- name
+- tell_icnum_appointment
 slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  phone:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: phone
   full_name:
     type: text
     mappings:
@@ -75,6 +94,8 @@ responses:
   - text: Could you please provide your full name?
   utter_ask_icnum:
   - text: Please provide your Mykad Number.
+  utter_ask_icnumber:
+  - text: Please provide your IC Number.
   utter_ask_visit_person:
   - text: Could you kindly let us know the name of the person you are here to visit?
   utter_ask_scheduledateone:
@@ -88,6 +109,18 @@ responses:
       Warmest Greeting from PTP.
 
       Your visitor registration is successful.
+  utter_appointment_confirm_isehat:
+  - text: |-
+      Dear {name}
+
+      Warmest Greeting from Isehat.
+  utter_ask_name:
+  - text: Hi, Hope you are having a good day. Could we start with your name please?
+  utter_ask_phone:
+  - text: Please provide your phone number.
+  utter_ask_apt_schedule:
+  - text: When would you like to schedule the appointment? Please provide the preferred date and time.
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -102,8 +135,15 @@ actions:
 - action_tell_scheduledateone
 - action_tell_scheduledatetwo
 - action_reg_status_check
+- action_tell_name
 - utter_ask_scheduledateone
 - utter_ask_scheduledatetwo
 - utter_appointment_confirm
 - utter_goodbye
 - utter_greet
+- utter_ask_name
+- utter_ask_phone
+- utter_ask_icnumber
+- action_tell_icnum_appointment
+- utter_ask_apt_schedule
+- action_submit_apt_isehat
