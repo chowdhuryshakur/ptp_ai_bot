@@ -55,7 +55,7 @@ stories:
   - action: action_restart
 ##====reg story end ======##
 
-##====appointement story for isehat start ======##
+##====appointement story for isihat start ======##
 - story: happy_appointment_path
   steps:
   - intent: appointment
@@ -70,11 +70,6 @@ stories:
     - phone: 0896786554
   - slot_was_set:
     - phone: 0896786554
-  - action: utter_ask_icnumber
-  - intent: tell_icnum_appointment
-  - action: action_tell_icnum_appointment
-  - slot_was_set:
-    - icnum: 323233-32-3333
   - action: utter_ask_apt_schedule
   - intent: tell_scheduledateone
   - action: action_tell_scheduledateone
@@ -83,5 +78,5 @@ stories:
   - action: utter_appointment_confirm_isehat
   - action: action_submit_apt_isehat
   - action: action_restart
-##====appointement for isehat end ======##
+##====appointement for isihat end ======##
 
