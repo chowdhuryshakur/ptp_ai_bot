@@ -9,7 +9,7 @@ stories:
 
 
 ##====reg story start ======##
-- story: happy_appointment_path
+- story: happy_reg_path
   steps:
   - intent: registration
   - action: utter_ask_full_name
@@ -55,7 +55,7 @@ stories:
   - action: action_restart
 ##====reg story end ======##
 
-##====appointement story for isihat start ======##
+##====appointement story for isehat start ======##
 - story: happy_appointment_path
   steps:
   - intent: appointment
@@ -67,7 +67,7 @@ stories:
   - action: utter_ask_phone
   - intent: tell_phone
     entities:
-    - phone: 0896786554
+    - phone: 01896786554
   - slot_was_set:
     - phone: 0896786554
   - action: utter_ask_apt_schedule
@@ -78,5 +78,5 @@ stories:
   - action: utter_appointment_confirm_isehat
   - action: action_submit_apt_isehat
   - action: action_restart
-##====appointement for isihat end ======##
+##====appointement for isehat end ======##
 

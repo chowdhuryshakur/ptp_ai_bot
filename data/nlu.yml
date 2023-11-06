@@ -110,20 +110,6 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: tell_icnum_appointment
-  examples: |
-    - "appoic 7438874384."
-    - "appoic is 43-434-43434."
-    - "appoic 4343443434."
-    - "12-332-2233"
-    - "appoic 3433234-323-2222"
-    - "appoic 664-323-4422"
-    - "appoic 3433234-111-2244"
-    - "appoic 566-111-2244"
-    - "appoic 3433234-111-2244"
-    - "appoic 555-111-2244"
-    - "appoic 675-111-2244"
-    - "appoic 3433234-111-2244"
 - intent: human_handoff
   examples: |
     - i am confused
@@ -206,6 +192,3 @@ nlu:
 - regex: phone
   examples: |
     - \d{10,14}
-- regex: tell_icnum_appointment
-  examples: |
-    - appoiic

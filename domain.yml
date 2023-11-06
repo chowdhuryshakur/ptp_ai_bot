@@ -17,11 +17,8 @@ intents:
 - tell_visit_person
 - vessel_schedule
 - reg_status
-- phone
-- name
 - tell_name
 - tell_phone
-- tell_icnum_appointment
 entities:
 - full_name
 - icnum
@@ -30,7 +27,6 @@ entities:
 - visit_person
 - phone
 - name
-- tell_icnum_appointment
 slots:
   name:
     type: text
@@ -94,8 +90,6 @@ responses:
   - text: Could you please provide your full name?
   utter_ask_icnum:
   - text: Please provide your Mykad Number.
-  utter_ask_icnumber:
-  - text: Please provide your IC Number.
   utter_ask_visit_person:
   - text: Could you kindly let us know the name of the person you are here to visit?
   utter_ask_scheduledateone:
@@ -124,6 +118,7 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  
 actions:
 - action_tell_visit_person
 - utter_ask_icnum
@@ -136,6 +131,7 @@ actions:
 - action_tell_scheduledatetwo
 - action_reg_status_check
 - action_tell_name
+- action_submit_apt_isehat
 - utter_ask_scheduledateone
 - utter_ask_scheduledatetwo
 - utter_appointment_confirm
@@ -143,7 +139,5 @@ actions:
 - utter_greet
 - utter_ask_name
 - utter_ask_phone
-- utter_ask_icnumber
-- action_tell_icnum_appointment
 - utter_ask_apt_schedule
-- action_submit_apt_isehat
+- utter_appointment_confirm_isehat
