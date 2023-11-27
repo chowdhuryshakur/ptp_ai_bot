@@ -70,6 +70,12 @@ stories:
     - phone: 01896786554
   - slot_was_set:
     - phone: 0896786554
+  - action: utter_ask_isihat_brances
+  - intent: tell_brance
+    entities:
+    - branch: balakong
+  - slot_was_set:
+    - branch: balakong
   - action: utter_ask_apt_schedule
   - intent: tell_scheduledateone
   - action: action_tell_scheduledateone

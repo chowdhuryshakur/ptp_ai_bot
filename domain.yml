@@ -19,6 +19,7 @@ intents:
 - reg_status
 - tell_name
 - tell_phone
+- tell_brance
 entities:
 - full_name
 - icnum
@@ -27,6 +28,7 @@ entities:
 - visit_person
 - phone
 - name
+- branch
 slots:
   name:
     type: text
@@ -63,6 +65,11 @@ slots:
     mappings:
     - type: from_entity
       entity: visit_person
+  branch:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: branch
 responses:
   utter_greet:
   - text: |-
@@ -114,6 +121,23 @@ responses:
   - text: Please provide your phone number.
   utter_ask_apt_schedule:
   - text: When would you like to schedule the appointment? Please provide the preferred date and time.
+  utter_ask_isihat_brances:
+  - text: |-
+      Dear {name}
+
+      good day, I'm from I-Sihat Dental Care. Thank you for contacting us.
+
+      Are you interested in wearing braces? Before that, can I know which of our 3 branches is the closest to you?
+      We have 3 branches in Klang Valley
+    
+    buttons:
+    - title: I Sihat Dental Care Setapak
+      payload: I Sihat Dental Care Setapak
+    - title: I Sihat Dental Care Balakong
+      payload: I Sihat Dental Care Balakong
+    - title: I Sihat Dental Care Bukit Jalil
+      payload: I Sihat Dental Care Bukit Jalil
+
   
 session_config:
   session_expiration_time: 60
@@ -140,4 +164,5 @@ actions:
 - utter_ask_name
 - utter_ask_phone
 - utter_ask_apt_schedule
+- utter_ask_isihat_brances
 - utter_appointment_confirm_isehat

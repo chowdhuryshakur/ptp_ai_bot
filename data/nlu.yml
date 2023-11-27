@@ -72,6 +72,11 @@ nlu:
     - My phone number is [4637457382](phone)
     - [33315327130](phone)
     - [+83283332838](phone)
+- intent: tell_brance
+  examples: |
+    - branch is [I Sihat Dental Care Setapak](branch)
+    - [I Sihat Dental Care Balakong](branch)
+    - Branch [I Sihat Dental Care Bukit Jalil](branch)
 - intent: goodbye
   examples: |
     - cu
